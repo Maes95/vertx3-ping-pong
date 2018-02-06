@@ -11,6 +11,7 @@ public class Pong extends AbstractVerticle {
     public void start() {
         getVertx().eventBus().consumer("ping-pong", message -> {
             log.info(String.format("ping-pong receive: %s", message));
+            log.info("PONG");
             message.reply("pong");
         }).completionHandler(event -> {
             if (event.succeeded()) log.info("complete handler");

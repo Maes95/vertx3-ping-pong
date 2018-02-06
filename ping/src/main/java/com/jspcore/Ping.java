@@ -10,7 +10,7 @@ public class Ping extends AbstractVerticle {
     @Override
     public void start() {
         getVertx().setPeriodic(1000L, id -> {
-            log.info("sending message ping...");
+            log.info("PING");
             getVertx().eventBus().send("ping-pong", "ping", response -> {
                 if (response.succeeded()) log.info("success");
                 else log.info("error?");
