@@ -30,7 +30,7 @@
                 <multicast-port>54327</multicast-port>
             </multicast>
             <tcp-ip enabled="true">
-
+              <interface>172.31.37.170</interface>
             </tcp-ip>
             <aws enabled="false">
                 <access-key>my-access-key</access-key>
